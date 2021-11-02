@@ -1,6 +1,10 @@
 properties([pipelineTriggers([githubPush()])])
  
 pipeline {
+    agent {
+        label 'master'
+    }
+ 
     stages {
          stage('Do the deployment') {
             steps {
